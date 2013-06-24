@@ -71,10 +71,10 @@ The Extended Time Period
     The third, involving month '22', I solved with some data validation
     code in the import command. I could have raised an exception and
     halted execution, but that would have resulted in partially imported
-    data, so I chose the insist on good data path.
+    data, so I chose the 'insist on good data' path.
 
     The fourth, involving correct output of the devotion body text took
-    a bit of hunting for me as django filters were not doing the trick
+    a bit of hunting as django filters were not doing the trick
     for me. I tried a number things using django.utils.html and
     django.utils.safestring, but to no avail. It was stackoverflow.com
     that again provided me with an introduction to HTMLParser from the
@@ -82,7 +82,7 @@ The Extended Time Period
 
     The word count was easily solved with a django template filter, but
     since you specifically asked for a view, I wrote some python to do
-    the calculation, as well (I sure it could be refactored into a betterdjango-taggit==0.10a1
+    the calculation, as well (I'm sure it could be refactored into a better
     form). I displayed both in the template to compare results.
 
 Conclusion
