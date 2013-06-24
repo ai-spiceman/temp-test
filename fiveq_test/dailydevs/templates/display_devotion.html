@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Your Devotion</title>
+    </head>
+
+    <body>
+        <div id="devotion">
+            <h4>{{ devotion.date }}</h4>
+            <h3>{{ devotion.title }}</h3>
+            {{ text|safe }}
+            <hr />
+            <p>{% if devotion.tags.all %}Tags: |
+                {% for tag in devotion.tags.all %}
+                    | {{ tag.name }} | 
+                {% endfor %}|{% endif %}
+                <br />Django Word Count: {{ text|safe|wordcount }}
+                <br />My Word Count: {{ words }}</p>
+        </div>
+    </body>
+</html>
